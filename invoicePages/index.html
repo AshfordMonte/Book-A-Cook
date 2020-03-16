@@ -14,29 +14,37 @@
       <body>
         <nav class="nav-extended">
           <div class="nav-wrapper #b71c1c red darken-4">
-            <a href="#" class="brand-logo">Home Meal</a>
+            <a href="#" class="brand-logo">Book A Cook</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="#">Start order</a></li>
-              <li><a href="#">Login</a></li>
-              
-            </ul>
+              <li><a href="#" id="login">Login</a></li>
+            </ul> 
+          
+            this is for if we decide to have start order/login in the side menu, can prob change to menu, home, chefs, etc. anything we want-->
+
+
+            <div class="section brand-logo" id="tagline">
+              <h6>Home Is Where The Food Is.</h6>
+            </div>
+
+            <!-- ALTERNATIVE to h6 above?
+            <div class="nav-content">
+              <span class="nav-title">Title</span>
+            </div> -->
+
           </div>
-          <div class="nav-content ">
+
+          <div class="nav-content">
             <ul class="tabs ">
-              <li class="tab"><a class="active black-text text-darken-4 " href="#menu">Menu</a></li>
-              <li class="tab"><a class=" active black-text text-darken-4" href="index.html">Home</a></li>
+              <li class="tab"><a class="active black-text text-darken-4" href="#menu">Menu</a></li>
+              <li class="tab"><a class=" active black-text text-darken-4" href="../index.html">Home</a></li>
               
             </ul>
           </div>
         </nav>
-      
-      
-        <ul class="sidenav" id="mobile-demo">
-          <li><a href="#">Start Order</a></li>
-          <li><a href="#">Log In</a></li>
-         
-        </ul>
+
+        <!-- if there is sidebar nav content, there is documentation for JS initialization https://materializecss.com/navbar.html -->
    
         <section  class="section section-popular scrollspy">
             <div class="container">
@@ -62,12 +70,12 @@
                               <tr>
                                 <td></td>
                                 <td><b>Total</b></td>
-                                <td>$0.87</td>
+                                <td id="total-cost"></td>
                               </tr>
                             </tbody>
                           </table>
 
-                          <h6>Enjoy Your Food</h6>
+                          <h6 id="enjoy">Enjoy Your Food</h6>
                         </div>
                     </div>
                   </div>
@@ -75,12 +83,12 @@
               </div>
             </div>
           </section>
-          <section id="search" class="section section-search  #b71c1c red darken-4 white-text center scrollspy">
+          <section id="search" class="section section-search #b71c1c red darken-4 white-text center scrollspy">
             <div class="container">
               <div class="row">
-                <div class="col m10">
-                  <div class="input-field">
-                    <i class="material-icons prefix" >room</i>
+                <div class="col m10 offset-m1 center-align">
+                  <div class="input-field alternate-color">
+                    <i class="material-icons prefix">room</i>
                     <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Enter Address">
                   </div>
                 </div>
