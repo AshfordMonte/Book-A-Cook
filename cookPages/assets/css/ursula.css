@@ -1,5 +1,5 @@
 body{
-    background-image: url("../images/undersea.jpg");
+    background-image: url("../images/ursulabackground.jpg");
     background-size: cover;
 }
 #tagline {
@@ -28,14 +28,12 @@ body{
     float: right;
     width: 30%;
     box-sizing: border-box;
-    padding: 20px;
 }
 
 #recipes{
     width: 500px;
     height: 200px;
     border: 0px;
-    padding: 10px;  
 }
 
 
