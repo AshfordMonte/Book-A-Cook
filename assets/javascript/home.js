@@ -18,3 +18,12 @@ $('input.autocomplete').autocomplete({
     console.log("autocompleted address")
   }
 });
+
+var address = "";
+$("#submit").on("click", function(event) {
+  event.preventDefault();
+
+  address = $("#autocomplete-input").val().trim();
+  console.log(address);
+  $("#autocomplete-input").val("");
+});
