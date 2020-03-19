@@ -31,7 +31,7 @@ function addressValidation(address, addressCook) {
   var queryURL = "http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=" +
     address1 + "&wp.1=" + address2 + "&distanceUnit=mi&key=" + key;
 
-  console.log(queryURL);
+  // console.log(queryURL);
 
   $.ajax({
     url: queryURL,
@@ -39,15 +39,19 @@ function addressValidation(address, addressCook) {
   }).then(function (response) {
     console.log("AJAX Called");
     var data = response.resourceSets[0].resources[0];
-    console.log(data);
+    // console.log(data);
 
-    if(data.travelDistance > 20){
+    if (data.travelDistance > 20) {
       validator.push(0);
     }
-    else{
+    else {
       validator.push(1);
     }
   });
+}
+
+function badAddressAlert() {
+  alert("Address Invalid! Please enter a valid address.");
 }
 
 var validator = [];
@@ -55,7 +59,7 @@ $("#submit").on("click", function (event) {
   event.preventDefault();
 
   var address = $("#autocomplete-input").val().trim();
-  console.log(address);
+  // console.log(address);
   $("#autocomplete-input").val("");
 
   var cookAddress = ["7500 W Slaughter Ln, Austin, TX 78749", "300 S Lamar Blvd, Austin, TX 78704", "2103 E 16th St, Austin, TX 78702"];
@@ -64,4 +68,25 @@ $("#submit").on("click", function (event) {
     addressValidation(address, cookAddress[i]);
   }
   console.log(validator);
+
+  setTimeout(function(){
+    var errorFlag = 1;
+    for (let i = 0; i < 3; i++) {
+      console.log("Looping");
+      if (validator[i] === 0) {
+        errorFlag = 0;
+        console.log("Error flag called");
+      }
+    }
+    console.log("This is error flag: " + errorFlag);
+  
+    if (errorFlag === 0) {
+      badAddressAlert();
+    }
+    else {
+      console.log("Good to go!");
+    }
+    validator = [];
+  }, 1000);
+
 });
