@@ -22,7 +22,7 @@ li a{
     text-shadow: rgb(231, 160, 179) 2px 2px 3px;
    
 }
-h1, a, .footer-copyright, .input-field , #search_result, .btn{
+h1, a, .footer-copyright, .input-field , #search_result, .btn, .card-content{
     font-family: 'Rye', cursive;
 }
 .footer-copyright{
