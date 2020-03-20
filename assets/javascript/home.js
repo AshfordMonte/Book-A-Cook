@@ -41,7 +41,7 @@ function addressValidation(address, addressCook) {
   address1 = encodeURI(address1);
   address2 = encodeURI(address2);
 
-  var queryURL = "http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=" +
+  var queryURL = "https://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=" +
     address1 + "&wp.1=" + address2 + "&distanceUnit=mi&key=" + key;
 
   // console.log(queryURL);
