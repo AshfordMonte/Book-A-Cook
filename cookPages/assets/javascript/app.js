@@ -35,3 +35,13 @@ console.log("File Linked");
     console.log(snapshot.val().address);
     address = snapshot.val().address;
   })
+
+  var item1 = $("#item-1").text();
+  var item2 = $("#item-2").text();
+  var item3 = $("#item-3").text();
+  item1 = item1.substring(0, item1.length - 5);
+  item2 = item2.substring(0, item2.length - 5);
+  item3 = item3.substring(0, item3.length - 5);
+  console.log(item1);
+  console.log(item2);
+  console.log(item3);
