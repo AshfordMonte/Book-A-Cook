@@ -1,5 +1,4 @@
-$(document).ready(function () {
-  console.log("File Linked");
+console.log("File Linked");
   // var key = "98cdf2c2b9f13779be5b1cdf9fe60347";
   // var appID = "9ad3a6a6";
 
@@ -15,26 +14,21 @@ $(document).ready(function () {
   //   console.log(response);
   //   var recipe = response.hits[0].recipe;
   //   console.log(recipe);
-  // });
 
-  var key = "AlAWRCVzQaselab1SC0uQ6Iv6pJ4jmNux7hGgBmewvh7UVQmlWnTuMYMIGE3jdxM";
-  var address1 = "909 Ambling Way Ct";
-  var address2 = "714 N Comanche St";
+  var firebaseConfig = {
+    apiKey: "AIzaSyChYCEg8dMgpUKXoyZVMVlCSEt7Gver2xU",
+    authDomain: "book-a-cook-bee9f.firebaseapp.com",
+    databaseURL: "https://book-a-cook-bee9f.firebaseio.com",
+    projectId: "book-a-cook-bee9f",
+    storageBucket: "book-a-cook-bee9f.appspot.com",
+    messagingSenderId: "938760268502",
+    appId: "1:938760268502:web:4b624c8fdc949f897db777"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var dataRef = firebase.database();
 
-  address1 = encodeURI(address1);
-  address2 = encodeURI(address2);
-
-  var queryURL = "http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=" +
-    address1 + "&wp.1=" + address2 + "&distanceUnit=mi&key=" + key;
-
-  console.log(queryURL);
-
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-    console.log(response);
-    var data = response.resourceSets[0].resources[0];
-    console.log(data);
-  });
-});
+  dataRef.ref().on("value", function(snapshot) {
+    console.log("Data read!");
+    console.log(snapshot.val().address);
+  })

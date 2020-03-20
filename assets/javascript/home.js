@@ -19,6 +19,20 @@ $('input.autocomplete').autocomplete({
   }
 });
 
+
+var firebaseConfig = {
+  apiKey: "AIzaSyChYCEg8dMgpUKXoyZVMVlCSEt7Gver2xU",
+  authDomain: "book-a-cook-bee9f.firebaseapp.com",
+  databaseURL: "https://book-a-cook-bee9f.firebaseio.com",
+  projectId: "book-a-cook-bee9f",
+  storageBucket: "book-a-cook-bee9f.appspot.com",
+  messagingSenderId: "938760268502",
+  appId: "1:938760268502:web:4b624c8fdc949f897db777"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var dataRef = firebase.database();
+
 function addressValidation(address, addressCook) {
   console.log("Address Validation Called");
   var key = "AlAWRCVzQaselab1SC0uQ6Iv6pJ4jmNux7hGgBmewvh7UVQmlWnTuMYMIGE3jdxM";
@@ -54,6 +68,13 @@ function badAddressAlert() {
   alert("Address Invalid! Please enter a valid address.");
 }
 
+function firebaseAddressSend(address) {
+  dataRef.ref().set({
+    address: address,
+    dateAdded: firebase.database.ServerValue.TIMESTAMP
+  });
+}
+
 var validator = [];
 $("#submit").on("click", function (event) {
   event.preventDefault();
@@ -85,6 +106,7 @@ $("#submit").on("click", function (event) {
     }
     else {
       console.log("Good to go!");
+      firebaseAddressSend(address);
     }
     validator = [];
   }, 1000);
