@@ -39,12 +39,24 @@ li a{
     background-color: coral;
     border-radius: 25px;
     padding: 10px;
-    
+}
+
+#chefImage{
+    width:100%;
+    height: 500px;
 }
 
 #chefMushu{
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
+}
+
+#chooseMeal{
+    margin-bottom: 10px;
+}
+
+.browser-default{
+    margin-bottom: 20px;
 }
 
 .cookRecipes{
@@ -53,6 +65,11 @@ li a{
     box-sizing: border-box;
     position: sticky;
     z-index: -1;
+}
+
+img{
+    width: 100%;
+    height: auto;
 }
 
 #recipes{
@@ -68,6 +85,6 @@ li a{
     padding: 20px;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
     font-family: 'Rye', cursive;
+    z-index: 4;
 }

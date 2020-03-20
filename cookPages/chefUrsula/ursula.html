@@ -28,8 +28,6 @@
   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 </head>
 
-</head>
-
 <!-- Section: NavBar -->
 <nav class="nav-extended #b71c1c red darken-4">
   <section class="section container">
@@ -43,7 +41,7 @@
 
   <div class="nav-content ">
     <ul class="tabs">
-      <li class="tab"><a class=" active black-text text-darken-4" href="../../index.html">Home</a></li>
+      <li class="tab"><a class=" active black-text text-darken-4" href="../../index.html"">Home</a></li>
     </ul>
   </div>
 </nav>
@@ -73,14 +71,23 @@
         </div>
       </div>
 
+      <label class="white-text text-darken-2" id="chooseMeal"><h4>Choose Your Meal</h4></label>
+      <select class="browser-default">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="1">Shrimp Fritters</option>
+        <option value="2">Mussels</option>
+        <option value="3">Cooked Salmon</option>
+      </select>
+        
+
     </div>
 
-    <!-- <div class="col s12 m5 cookRecipes"> -->
+    <div class= cookRecipes"> 
 
       <!-- Begin Shrimp Fritters -->
       <div class="section card horizontal" id="recipes">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="../assets/images/shrimpfritters.jpg" height="200px" width="200px">
+          <img class="activator" src="../assets/images/shrimpfritters.jpg">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Shrimp Fritters <i
@@ -98,7 +105,7 @@
 
       <div class="section card horizontal" id="recipes">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="../assets/images/mussels.jpeg" height="150px" width="150px">
+          <img class="activator" src="../assets/images/mussels.jpeg">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Mussels<i
@@ -120,7 +127,7 @@
 
       <div class="section card horizontal" id="recipes">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="../assets/images/salmon.jpeg" height="200px" width="150px">
+          <img class="activator" src="../assets/images/salmon.jpeg">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Cooked Salmon<i
@@ -138,7 +145,7 @@
 
   </div>
 
-<!-- </div> -->
+</div>
 <!-- End Div -->
 
 <footer class="page-footer #b71c1c red darken-4" id="main-footer">
