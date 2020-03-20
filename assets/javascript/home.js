@@ -52,7 +52,7 @@ function addressValidation(address, addressCook) {
   }).then(function (response) {
     console.log("AJAX Called");
     var data = response.resourceSets[0].resources[0];
-    // console.log(data);
+    console.log(data);
 
     if (data.travelDistance > 20) {
       validator.push(0);
