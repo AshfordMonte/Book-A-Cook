@@ -46,12 +46,25 @@ li a{
     box-sizing: border-box;
 }
 
+#chooseMeal{
+    margin-bottom: 10px;
+}
+
+.browser-default{
+    margin-bottom: 20px;
+}
+
 .cookRecipes{
     font-family: 'Raleway', sans-serif;
     float: right;
     box-sizing: border-box;
     position: sticky;
     z-index: -1;
+}
+
+img{
+    width: 100%;
+    height: auto;
 }
 
 #recipes{
@@ -66,8 +79,8 @@ li a{
     width: 100%;
     padding: 20px;
     text-align: center;
-    padding: 20px;
     margin-top: 40px;
     font-family: 'Rye', cursive;
+    z-index: 4;
 }
 
