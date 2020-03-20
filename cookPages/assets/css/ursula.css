@@ -41,10 +41,6 @@ li a{
     padding: 10px;
 }
 
-#chefImage{
-    width:100%;
-    height: 500px;
-}
 
 #chefUrsula{
     font-family: 'Raleway', sans-serif;
@@ -56,6 +52,10 @@ li a{
 }
 
 .browser-default{
+    margin-bottom: 20px;
+}
+
+#orderButton{
     margin-bottom: 20px;
 }
 
@@ -74,18 +74,17 @@ img{
 
 #recipes{
     border: 0px;
-    padding: 10px; 
+    padding: 10px;  
+    margin-bottom: 20px;
 }
 
 #main-footer{
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
     width: 100%;
     padding: 20px;
-    text-align: center;
-    margin-top: 40px;
+    text-align: center;    
     font-family: 'Rye', cursive;
     z-index: 4;
 }
-
