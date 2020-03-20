@@ -1,6 +1,7 @@
 body{
     background-image: url("../images/mushubackground.jpg");
-    background-size: cover;
+    background-size: center;
+    background-repeat: no-repeat;
     
 }
 
@@ -39,12 +40,23 @@ li a{
     background-color: coral;
     border-radius: 25px;
     padding: 10px;
-    
 }
 
 #chefMushu{
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
+}
+
+#chooseMeal{
+    margin-bottom: 10px;
+}
+
+.browser-default{
+    margin-bottom: 20px;
+}
+
+#orderButton{
+    margin-bottom: 20px;
 }
 
 .cookRecipes{
@@ -55,19 +67,24 @@ li a{
     z-index: -1;
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
 #recipes{
     border: 0px;
     padding: 10px;  
+    margin-bottom: 20px;
 }
 
 #main-footer{
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
     width: 100%;
     padding: 20px;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    text-align: center;    
     font-family: 'Rye', cursive;
+    z-index: 4;
 }

@@ -1,6 +1,5 @@
 body{
     background-image: url("../images/simbabackground.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -47,29 +46,44 @@ li a{
     box-sizing: border-box;
 }
 
+#chooseMeal{
+    margin-bottom: 10px;
+}
+
+.browser-default{
+    margin-bottom: 20px;
+}
+
+#orderButton{
+    margin-bottom: 20px;
+}
+
 .cookRecipes{
     font-family: 'Raleway', sans-serif;
     float: right;
-    width: 40%;
     box-sizing: border-box;
     position: sticky;
     z-index: -1;
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
 #recipes{
     border: 0px;
-    padding: 10px; 
+    padding: 10px;  
+    margin-bottom: 20px;
 }
 
 #main-footer{
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
     width: 100%;
     padding: 20px;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    background-color: black;
+    text-align: center;    
     font-family: 'Rye', cursive;
+    z-index: 4;
 }
