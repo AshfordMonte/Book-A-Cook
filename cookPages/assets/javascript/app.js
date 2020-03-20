@@ -2,7 +2,7 @@ console.log("File Linked");
   var key = "98cdf2c2b9f13779be5b1cdf9fe60347";
   var appID = "9ad3a6a6";
 
-  var queryURL = "https://api.edamam.com/search?q=sushi&app_id=" +
+  var queryURL = "https://api.edamam.com/search?q=tempura&app_id=" +
     appID + "&app_key=" + key;
 
   console.log(queryURL);
