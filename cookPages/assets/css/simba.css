@@ -1,52 +1,75 @@
 body{
     background-image: url("../images/simbabackground.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    
 }
+
+li a{
+    font-family: 'Rye', cursive;
+    font-weight: bold;
+    size: 60px;
+    text-shadow: rgb(231, 160, 179) 2px 2px 3px;
+  }
+
 #tagline {
-    padding-top: 40px;
+    text-align: center;
     position: relative;
+    font-weight: bold;
+    font-family: 'Rye', cursive;
+    text-shadow: rgb(214, 211, 22) 1px 1px 2px;
 }
 
 .container{
     font-family: 'Raleway', sans-serif;
-    color: green;
-    background-color: ivory;
     background-position: center;
     text-align: center;
+}
 
+.container h1{
+    font-family: 'Rye', cursive;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: rgb(214, 211, 22) 2px 2px 3px;
+}
+
+#chefName{
+    font-family: 'Rye', cursive;
+    color: black;
+    background-color: yellowgreen;
+    border-radius: 25px;
+    padding: 10px;
 }
 
 #chefSimba{
     font-family: 'Raleway', sans-serif;
-    float: left;
-    width: 70%;
-    padding: 0 10px;
     box-sizing: border-box;
 }
 
 .cookRecipes{
     font-family: 'Raleway', sans-serif;
     float: right;
-    width: 30%;
+    width: 40%;
     box-sizing: border-box;
+    position: sticky;
+    z-index: -1;
 }
 
 #recipes{
-    width: 500px;
-    height: 200px;
-    border: 0px; 
-   
+    border: 0px;
+    padding: 10px; 
 }
 
-@media(max-width: 960px){
-    #chefSimba{
-        width: 100%;
-        float: none;
-    }
-
-    .cookRecipes{
-        width: 100%;
-        float: none;
-    }
+#main-footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: black;
+    font-family: 'Rye', cursive;
 }
