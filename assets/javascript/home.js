@@ -1,10 +1,9 @@
 // Sidenav
 $(document).ready(function () {
   $("#search_result").hide();
-
   $(".sidenav").sidenav();
-  $(".carousel").carousel();
-  $('.slider').slider({ full_width: true });
+  $('.carousel').carousel();
+  $(".slider").slider({ full_width: true });
 
 
 });

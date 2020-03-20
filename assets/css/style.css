@@ -62,3 +62,13 @@ h1, a, .footer-copyright, .input-field , #search_result, .btn, .card-content{
   .btn:hover {
     background-color:transparent
   }
+  .page-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: rgb(214, 211, 22) 1px 1px 2px;
+}
