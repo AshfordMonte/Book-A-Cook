@@ -49,7 +49,6 @@ li a{
 .cookRecipes{
     font-family: 'Raleway', sans-serif;
     float: right;
-    width: 40%;
     box-sizing: border-box;
     position: sticky;
     z-index: -1;
