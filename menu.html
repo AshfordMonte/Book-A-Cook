@@ -1,127 +1,99 @@
 <!DOCTYPE html>
-    <html>
-      <head>
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Import materialize.css-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <!--Google font-->
-        <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
-        <!--Css Link-->
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Home Meal</title>
-        <meta charset="UTF-8">
-      </head>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <body>
-        <nav class="nav-extended #b71c1c red darken-4">
-          <section class="section container ">
-            <div class="row">
-              <div class="col s4">
-                <h1>Cooks!!!</h1>
-             </div>
-              <div class="col s6">
-                <div class="input-field ">
-                  <i class="material-icons prefix">room</i>
-                  <input type="text" id="autocomplete-input" class="autocomplete">
-                  <label for="autocomplete-input">Enter delivery address</label>
-                </div>
-               
-              </div>
-              <div class="col s2">
-                <div class="input-field ">
-                  <button id="submit" class="btn #b71c1c red darken-4 " type="submit" name="action">Submit</button>  
-                </div>
-              </div>
-            </div>
-            
-         </section>
-          <div class="nav-content ">
-            <ul class="tabs ">
-              <li class="tab"><a class="active black-text text-darken-4 " href="index.html">Home</a></li>
-            
-            </ul>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Google font-->
+  <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
+  <!--Css Link-->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Meal</title>
+  <meta charset="UTF-8">
+</head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<body>
+  <nav class="nav-extended #b71c1c red darken-4">
+    <section class="section container ">
+      <div class="row">
+        <div class="col s4">
+          <h1>Cooks!!!</h1>
+        </div>
+        <div class="col s6">
+          <div class="input-field ">
+            <i class="material-icons prefix">room</i>
+            <input type="text" id="autocomplete-input" class="autocomplete">
+            <label for="autocomplete-input">Enter delivery address</label>
           </div>
-        </nav>   
-   
-        <section  class="section scrollspy">
-            <div class="container">
-              <div class="row">
- 
-                <div class="col s12 m4">
-                  <div class="card  z-depth-4" id="chefSimba">
-                    <div class="card-image">
-                      <img src="assets/images/simba.jpg" alt="">
-                      
-                    </div>
-                    <div class="card-content">
-                    <p>Hakuna Matata, it means no worriesssss, Simba's got youuuuu. All
-             in seriousness, I've taken care of all of your favorite homecooked meals! My
-             homecooked meals are some of the most heartiest meals you've ever
-             tasted. Beef Stew with Veggies or Chicken Pot Pie is a sure way to
-             make you feel at home away from home!</p> <br>
-             
-                    </div>
-                  </div>
-                </div>
-                <div class="col s12 m4">
-                  <div class="card  z-depth-4" id="chefMushu">
-                    <div class="card-image">
-                      <img src="assets/images/mushu.jpg" alt="">
-                     
-                    </div>
-                    <div class="card-content">
-                      Hi there, the name is Mushu! I'm Mulan's personal chef but I'm
-             here to share my homecooking skills with those who are craving
-             delish Japanese food. I've got Sushi, Tempura, and Ramen. What's
-             your pick?
-                    </div>
-                  </div>
-                </div>
-                <div class="col s12 m4">
-                  <div class="card  z-depth-4" id="chefUrsula">
-                    <div class="card-image">
-                      <img src="assets/images/ursula.jpeg" alt="">
-                     
-                    </div>
-                    <div class="card-content">
-                      Hello! My name is Ursula, and I reign the sea! In my free time,
-             other than stealing people's voices, I love to cook! Seafood is my forte,
-            pick one of my main dishes, you will not be disappointed!
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card-content">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea deserunt officia, dicta sint
-              perferendis.
-            </div>
+
+        </div>
+        <div class="col s2">
+          <div class="input-field ">
+            <button id="submit" class="btn #b71c1c red darken-4 " type="submit" name="action">Submit</button>
           </div>
         </div>
-        <div class="col s12 m4">
-          <div class="card  z-depth-4" id="chefUrsula">
-            <div class="card-image">
-              <img src="assets/images/food4.jpeg" alt="">
+      </div>
+    </section>
+    <div class="nav-content ">
+      <ul class="tabs ">
+        <li class="tab"><a class="active black-text text-darken-4 " href="index.html">Home</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <section class="section scrollspy">
+    <div class="container">
+      <div class="row">
+
+        <div class="col s12 m4">
+          <div class="card  z-depth-4" id="chefSimba">
+            <a href="cookPages/chefSimba/simba.html">
+              <div class="card-image">
+                <img src="assets/images/simba.jpg" alt="">
+              </div>
+              <div class="card-content">
+                <p>Hearty Food is my forte,pick one of my main dishes, you will not be disappointed!
+                </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="card  z-depth-4" id="chefMushu">
+          <a href="cookPages/chefMushu/mushu.html">
+            <div class="card-image">
+              <img src="assets/images/mushu.jpg" alt="">
             </div>
             <div class="card-content">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea deserunt officia, dicta sint
-              perferendis.
+              <p>Japanese food is my forte,pick one of my main dishes, you will not be disappointed!</p>
             </div>
-          </div>
+          </a>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="card  z-depth-4" id="chefUrsula">
+          <a href="cookPages/chefUrsula/ursula.html">
+            <div class="card-image">
+              <img src="assets/images/ursula.jpeg" alt="">
+            </div>
+            <div class="card-content">
+              <p>Seafood is my forte,pick one of my main dishes, you will not be disappointed!</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
+    </div>
   </section>
-  <footer class="page-footer #b71c1c red darken-4">
-    <div class="footer-copyright ">
-      <div class="container">
-        © 2020 Copyright
-      </div>
+  <footer>
+    <div class="page-footer #b71c1c red darken-4">
+      © 2020 Copyright
     </div>
   </footer>
   <!--JavaScript at end of body for optimized loading-->
@@ -130,6 +102,7 @@
   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
   <script type="text/javascript" src="assets/javascript/home.js"></script>
+
 
 </body>
 
