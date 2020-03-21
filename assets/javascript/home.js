@@ -53,7 +53,6 @@ function addressValidation(address, addressCook) {
     console.log("AJAX Called");
     var data = response.resourceSets[0].resources[0];
     console.log(data);
-
     if (data.travelDistance > 20) {
       validator.push(0);
     }
@@ -68,6 +67,7 @@ function badAddressAlert() {
 }
 
 function firebaseAddressSend(address) {
+  alert("Address successfully submitted. Select a cook to begin your order!")
   dataRef.ref().set({
     address: address,
     dateAdded: firebase.database.ServerValue.TIMESTAMP
@@ -79,6 +79,10 @@ $("#submit").on("click", function (event) {
   event.preventDefault();
 
   var address = $("#autocomplete-input").val().trim();
+  if(address === ""){
+    badAddressAlert();
+    return;
+  }
   // console.log(address);
   $("#autocomplete-input").val("");
 
