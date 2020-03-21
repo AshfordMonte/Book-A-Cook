@@ -79,6 +79,7 @@ $("select").change(function () {
 $("#orderButton").on("click", function () {
   var driveTime = 0;
   var prepTime = cookTime[selectedIndex - 1];
+  var driveLength = 0;
 
   setTimeout(function () {
     var key = "AlAWRCVzQaselab1SC0uQ6Iv6pJ4jmNux7hGgBmewvh7UVQmlWnTuMYMIGE3jdxM";
@@ -99,6 +100,7 @@ $("#orderButton").on("click", function () {
     }).then(function (response) {
       console.log("AJAX Called");
       var data = response.resourceSets[0].resources[0];
+      driveLength = Math.ceil(data.travelDistance);
       driveTime = Math.floor(data.travelDurationTraffic / 60);
       var totalTime = driveTime + prepTime;
       console.log("Drive time: " + driveTime);
@@ -108,6 +110,7 @@ $("#orderButton").on("click", function () {
         address: address,
         totalTime: totalTime,
         food: selectedFood,
+        driveLength: driveLength,
         dateAdded: firebase.database.ServerValue.TIMESTAMP
       });
     });
@@ -116,6 +119,6 @@ $("#orderButton").on("click", function () {
 
 
     console.log("Changing page!");
-    // location.href = "../../invoicePages/index.html"
+    location.href = "../../invoicePages/index.html"
   }, 2000);
 });
