@@ -18,6 +18,20 @@ $('input.autocomplete').autocomplete({
   }
 });
 
+
+var firebaseConfig = {
+  apiKey: "AIzaSyChYCEg8dMgpUKXoyZVMVlCSEt7Gver2xU",
+  authDomain: "book-a-cook-bee9f.firebaseapp.com",
+  databaseURL: "https://book-a-cook-bee9f.firebaseio.com",
+  projectId: "book-a-cook-bee9f",
+  storageBucket: "book-a-cook-bee9f.appspot.com",
+  messagingSenderId: "938760268502",
+  appId: "1:938760268502:web:4b624c8fdc949f897db777"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var dataRef = firebase.database();
+
 function addressValidation(address, addressCook) {
   console.log("Address Validation Called");
   var key = "AlAWRCVzQaselab1SC0uQ6Iv6pJ4jmNux7hGgBmewvh7UVQmlWnTuMYMIGE3jdxM";
@@ -27,7 +41,7 @@ function addressValidation(address, addressCook) {
   address1 = encodeURI(address1);
   address2 = encodeURI(address2);
 
-  var queryURL = "http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=" +
+  var queryURL = "https://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0=" +
     address1 + "&wp.1=" + address2 + "&distanceUnit=mi&key=" + key;
 
   // console.log(queryURL);
@@ -38,8 +52,7 @@ function addressValidation(address, addressCook) {
   }).then(function (response) {
     console.log("AJAX Called");
     var data = response.resourceSets[0].resources[0];
-    // console.log(data);
-
+    console.log(data);
     if (data.travelDistance > 20) {
       validator.push(0);
     }
@@ -53,11 +66,23 @@ function badAddressAlert() {
   alert("Address Invalid! Please enter a valid address.");
 }
 
+function firebaseAddressSend(address) {
+  alert("Address successfully submitted. Select a cook to begin your order!")
+  dataRef.ref().set({
+    address: address,
+    dateAdded: firebase.database.ServerValue.TIMESTAMP
+  });
+}
+
 var validator = [];
 $("#submit").on("click", function (event) {
   event.preventDefault();
 
   var address = $("#autocomplete-input").val().trim();
+  if(address === ""){
+    badAddressAlert();
+    return;
+  }
   // console.log(address);
   $("#autocomplete-input").val("");
 
@@ -84,6 +109,7 @@ $("#submit").on("click", function (event) {
     }
     else {
       console.log("Good to go!");
+      firebaseAddressSend(address);
     }
     validator = [];
   }, 1000);

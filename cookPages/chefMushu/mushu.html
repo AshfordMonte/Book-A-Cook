@@ -24,6 +24,8 @@
   <meta charset="UTF-8">
 
   <title>Chef Mushu - Japanese Food</title>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 </head>
 
 <!-- Section: NavBar -->
@@ -66,7 +68,7 @@
           Japanese food. I've got Sushi, Tempura, and Ramen. What's your pick?
           </p> <br>
 
-          <p>300 S Lamar Blvd, Austin, TX 78704</p>
+          <p id="address">300 S Lamar Blvd, Austin, TX 78704</p>
         </div>
       </div>
 
@@ -94,7 +96,7 @@
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Sushi <i
               class="material-icons right">more_vert</i></span>
-          <p><a href="#">Sushi Recipe</a></p>
+          <p><a href="#" id="recipe1">Sushi Recipe</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4" id="item-1">Sushi <i class="material-icons right">close</i></span>
@@ -113,7 +115,7 @@
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Tempura<i
               class="material-icons right">more_vert</i></span>
-          <p><a href="#">Tempura Recipe</a></p>
+          <p><a href="#" id="recipe2">Tempura Recipe</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4" id="item-2">Tempura<i
@@ -134,7 +136,7 @@
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Ramen<i
               class="material-icons right">more_vert</i></span>
-          <p><a href="#"> Ramen Recipe</a></p>
+          <p><a href="#" id="recipe3"> Ramen Recipe</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4" id="item-3">Ramen<i

@@ -1,90 +1,92 @@
 <!DOCTYPE html>
-    <html>
-      <head>
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Import materialize.css-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <!--Google font-->
-        <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Your Order</title>
-      </head>
+<html>
 
-      <body>
-        <!-- Section: NavBar -->
-        <nav class="nav-extended #b71c1c red darken-4">
-          <section class="section container">
-            <div class="row">
-              <div class="col s4">
-                <h1>Book a Cook</h1>
-                <h6 id="tagline">Home Is Where The Food Is.</h6>
-              </div>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!--Google font-->
+  <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Order</title>
+  <meta charset="UTF-8">
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+</head>
+
+<body>
+  <!-- Section: NavBar -->
+  <nav class="nav-extended #b71c1c red darken-4">
+    <section class="section container">
+      <div class="row">
+        <div class="col s4">
+          <h1>Book a Cook</h1>
+          <h6 id="tagline">Home Is Where The Food Is.</h6>
+        </div>
+      </div>
+    </section>
+
+    <div class="nav-content ">
+      <ul class="tabs">
+        <li class="tab"><a class=" active black-text text-darken-4" href="../index.html">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Section: Invoice Card -->
+  <section class="section section-popular">
+    <div class="container">
+      <div class="row">
+
+        <div class="col s12 m8 offset-m2 center-align">
+          <div class="card">
+            <div class="card-content">
+              <img src="assets/images/FoodIcon.png" width="100">
+              <h4>Book A Cook</h4>
+              <h5>Thank you for your order!</h5>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+              </table>
+
+              <h6 id="enjoy">Enjoy Your Food</h6>
             </div>
-          </section>
-
-          <div class="nav-content ">
-            <ul class="tabs">
-                <li class="tab"><a class=" active black-text text-darken-4" href="index.html">Home</a></li>
-            </ul>
           </div>
-        </nav>
-   
-        <!-- Section: Invoice Card -->
-        <section  class="section section-popular">
-            <div class="container">
-              <div class="row">
- 
-                <div class="col s12 m8 offset-m2 center-align">
-                  <div class="card">                      
-                    <div class="card-content">
-                        <img src="assets/images/FoodIcon.png" width="100">
-                        <h4>Book A Cook</h4>
-                        <h5>Thank you for your order!</h5>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 
-                        <table>
-                            <thead>
-                              <tr>
-                                  <th>Item</th>
-                                  <th>Quantity</th>
-                                  <th>Subtotal</th>
-                              </tr>
-                            </thead>
-                    
-                            <tbody>
-                              <tr>
-                                <td></td>
-                                <td><b>Total</b></td>
-                                <td id="total-cost"></td>
-                              </tr>
-                            </tbody>
-                          </table>
+  <!-- Section: Footer -->
+  <footer class="page-footer #b71c1c red darken-4">
+    <div class="container">
+      © 2020 Copyright
+    </div>
+  </footer>
 
-                          <h6 id="enjoy">Enjoy Your Food</h6>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
 
-          <!-- Section: Footer -->
-          <footer class="page-footer #b71c1c red darken-4">
-            <div class="container">
-              © 2020 Copyright 
-            </div>
-          </footer>
- 
-  
-        <!--JavaScript at end of body for optimized loading-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      
-        <script type="text/javascript" src="assets/javascript/invoice.js"></script>
-       
-      </body>
-    </html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script type="text/javascript" src="assets/javascript/invoice.js"></script>
+
+</body>
+
+</html>

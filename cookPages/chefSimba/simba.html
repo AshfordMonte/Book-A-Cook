@@ -24,6 +24,8 @@
   <meta charset="UTF-8">
 
   <title>Chef Simba - Hearty Food</title>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 </head>
 
 <!-- Section: NavBar -->
@@ -67,7 +69,7 @@
           you've ever tasted. Beef Stew with Veggies or Chicken Pot Pie is a
           sure way to make you feel at home away from home! </p> <br>
 
-          <p>2103 E 16th St, Austin, TX 78702</p>
+          <p id="address">2103 E 16th St, Austin, TX 78702</p>
         </div>
       </div>
 
@@ -93,7 +95,7 @@
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Hearty Vegetable Soup <i
               class="material-icons right">more_vert</i></span>
-          <p><a href="#">Hearty Vegetable Soup Recipe</a></p>
+          <p><a href="#" id="recipe1">Hearty Vegetable Soup Recipe</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4" id="item-1">Hearty Vegetable Soup <i class="material-icons right">close</i></span>
@@ -111,7 +113,7 @@
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Beef Stew with Carrots & Potatoes<i
               class="material-icons right">more_vert</i></span>
-          <p><a href="#">Beef Stew with Carrots & Potatoes Recipe</a></p>
+          <p><a href="#" id="recipe2">Beef Stew with Carrots & Potatoes Recipe</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4" id="item-2">Beef Stew with Carrots & Potatoes<i
@@ -131,7 +133,7 @@
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Chicken Pot Pie<i
               class="material-icons right">more_vert</i></span>
-          <p><a href="#"> Chicken Pot Pie Recipe</a></p>
+          <p><a href="#" id="recipe3"> Chicken Pot Pie Recipe</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4" id="item-3">Chicken Pot Pie<i
